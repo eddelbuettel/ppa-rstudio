@@ -7,7 +7,7 @@
 ## apt install --no-install-recommends r-cran-littler r-cran-jsonlite apt-utils
 
 ## assume we have a directory for the ppa, here called docs, which you can then
-## soft-link into ~/www or whereever you server http content from
+## symlink into ~/www or whereever you serve http content from
 test -d docs || exit 1
 
 ## operate in docs/

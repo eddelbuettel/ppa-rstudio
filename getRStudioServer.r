@@ -12,7 +12,7 @@
 
 url <- "https://dailies.rstudio.com/rstudio/latest/index.json"
 js <- jsonlite::fromJSON(url)
-fileurl <- js$products$server$platforms$bionic$link
+fileurl <- js$products$server$platforms$`jammy-amd64`$link
 file <- basename(fileurl)
 #cat("'", url, "' -> '", file, "'\n", sep="")
-download.file(fileurl, file, quiet=TRUE)
+if (!file.exists(file)) download.file(fileurl, file, quiet=TRUE)

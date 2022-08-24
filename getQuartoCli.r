@@ -13,5 +13,5 @@ res <- jsonlite::fromJSON(url)
 files <- res$assets[, "browser_download_url"]
 deb <- files[grepl("\\.deb$", files)]
 tgt <- basename(deb)
-download.file(deb, tgt, quiet=TRUE)
+if (!file.exists(tgt)) download.file(deb, tgt, quiet=TRUE)
 #cat("Downloaded '", deb, "' as '", tgt, "'\n", sep="")

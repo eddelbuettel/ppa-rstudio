@@ -14,9 +14,9 @@ test -d docs || exit 1
 cd docs
 
 ## we explicitly remove exiting ones
-for d in *.deb; do
-    rm -f ${d}
-done
+#for d in *.deb; do
+#    rm -f ${d}
+#done
 
 ## the scripts are currently / for now simple (minimally modified) copies of
 ## the variant in the littler repo
@@ -27,4 +27,4 @@ done
 ## create repo files
 apt-ftparchive packages . > Packages
 cat Packages | gzip - > Packages.gz
-apt-ftparchive release . > Release
+apt-ftparchive -c repo.conf release . > Release

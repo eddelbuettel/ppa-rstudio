@@ -16,4 +16,4 @@ js <- jsonlite::fromJSON(url)
 fileurl <- js$products$electron$platforms$`jammy-amd64`$link
 file <- basename(fileurl)
 #cat("'", fileurl, "' -> '", file, "'\n", sep="")
-download.file(fileurl, file, quiet=TRUE)
+if (!file.exists(file)) download.file(fileurl, file, quiet=TRUE)

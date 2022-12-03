@@ -23,6 +23,7 @@ cd docs
 ../getRStudioDesktop.r
 ../getRStudioServer.r
 ../getQuartoCli.r
+../pruneDebs.r
 
 ## create repo files
 apt-ftparchive packages . > Packages

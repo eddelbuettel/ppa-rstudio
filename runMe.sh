@@ -29,3 +29,4 @@ cd docs
 apt-ftparchive packages . > Packages
 cat Packages | gzip - > Packages.gz
 apt-ftparchive -c repo.conf release . > Release
+cat Release | ~/bin/ng.pl > Release.gpg

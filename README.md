@@ -16,7 +16,7 @@ in the case of the `quarto` package).  What was
 missing was putting three lines to together to make it a repo that `apt` can
 access: a `PPA` so to speak.  
 
-Having set up a few others one here (and of course on Launchpad where this
+Having set up a few other ones here (and of course on Launchpad where this
 cannot run as it accesses remote URLs) it became clear that this was a good
 idea.  But with the 100mb file limit at GitHub we cannot host such a repo
 here. Cue a sad trombone.

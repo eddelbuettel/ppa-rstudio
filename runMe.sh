@@ -23,6 +23,7 @@ cd docs
 ../getRStudioDesktop.r
 ../getRStudioServer.r
 ../getQuartoCli.r
+../getPositron.r
 ../pruneDebs.r
 
 ## create repo files

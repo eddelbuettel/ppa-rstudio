@@ -13,7 +13,9 @@ res <- jsonlite::fromJSON(url)
 #deb <- files[grepl("\\.deb$", files)]
 
 ## hidden in body text
-deb <- gsub(".*(https://cdn.posit.co/positron/dailies/deb/x86_64/Positron-.*x64.deb).*", "\\1", res$body[1])
+#deb <- gsub(".*(https://cdn.posit.co/positron/dailies/deb/x86_64/Positron-.*x64.deb).*", "\\1", res$body[1])
+## now releases rather than dailies
+deb <- gsub(".*(https://cdn.posit.co/positron/releases/deb/x86_64/Positron-.*x64.deb).*", "\\1", res$body[1])
 
 tgt <- basename(deb)
 if (!file.exists(tgt)) download.file(deb, tgt, quiet=TRUE)
